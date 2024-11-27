@@ -50,6 +50,7 @@
     <ItemGroup>
       <PackageReference Include="Material.Components.Maui" Version="0.2.2-preview" />
       <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="Syncfusion.Maui.Core" Version="27.2.4" />
     </ItemGroup>
 

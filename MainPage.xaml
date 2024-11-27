@@ -17,6 +17,7 @@
 					    <Picker
 						    x:Name="AtivosSelects"
 						    Title="Ativos"
+						    ItemsSource="{Binding Ativos}"
 						    FontFamily="Bold"
 						    FontSize="20"
 						    WidthRequest="150"
@@ -30,6 +31,7 @@
 					    <Picker
 						    x:Name="LadoSelects"
 						    Title="Lado"
+						    ItemsSource="{Binding Lado}"
 						    FontFamily="Bold"
 						    FontSize="20"
 						    WidthRequest="150"
@@ -46,6 +48,7 @@
 			            Padding="10,5"
 			            Margin="0,35,0,0">
 				    <Entry
+					    x:Name="ValorInput"
 					    Placeholder="Valor"
 					    Keyboard="Numeric"
 					    MaxLength="5"
@@ -59,6 +62,7 @@
 			            Padding="10,5"
 			            Margin="0,15,0,0">
 				    <Entry
+					    x:Name="QuantidadeInput"
 					    Placeholder="Quantidade"
 					    Keyboard="Numeric"
 					    MaxLength="5"
@@ -70,6 +74,7 @@
 				    <Label Text="Conta:" FontSize="16"/>
 			    
 				    <Entry
+					    x:Name="contaInput"
 					    Placeholder="000030234"
 					    Keyboard="Numeric"
 					    MaxLength="10"
@@ -91,7 +96,8 @@
 			        BackgroundColor="MediumAquamarine"
 			        Margin="0,0,0,25"
 			        VerticalOptions="End"
-			        Grid.Row="1"/>
+			        Grid.Row="1"
+			        Clicked="OnEnviarClicked"/>
 	    </Grid>
 	</ScrollView>
 </ContentPage>
