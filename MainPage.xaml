@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stock_Exchange_Simulator.MainPage">
+	
+	
+	<ScrollView>
+		<Grid Margin="20, 50, 20, 0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/> 
+				<RowDefinition Height="*"/>   
+			</Grid.RowDefinitions>
+			
+			<StackLayout Grid.Row="0" Spacing="20">
+				<HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+				    <Border BackgroundColor="Gainsboro">
+					    <Picker
+						    x:Name="AtivosSelects"
+						    Title="Ativos"
+						    FontFamily="Bold"
+						    FontSize="20"
+						    WidthRequest="150"
+						    HeightRequest="90"
+						    HorizontalTextAlignment="Center"
+						    TextColor="Black" 
+						   />			   
+				    </Border>
+				    
+				    <Border BackgroundColor="Gainsboro">
+					    <Picker
+						    x:Name="LadoSelects"
+						    Title="Lado"
+						    FontFamily="Bold"
+						    FontSize="20"
+						    WidthRequest="150"
+						    HeightRequest="90"
+						    HorizontalTextAlignment="Center"
+						    TextColor="Black"
+					    />			   
+				    </Border>
+			    </HorizontalStackLayout>
+			    
+			    <Border Stroke="Black"
+			            StrokeThickness="1.5"
+			            StrokeShape="RoundRectangle 5"
+			            Padding="10,5"
+			            Margin="0,35,0,0">
+				    <Entry
+					    Placeholder="Valor"
+					    Keyboard="Numeric"
+					    MaxLength="5"
+					    FontSize="20"
+					    ClearButtonVisibility="WhileEditing"/>
+			    </Border>
+			    
+			    <Border Stroke="Black"
+			            StrokeThickness="1.5"
+			            StrokeShape="RoundRectangle 5"
+			            Padding="10,5"
+			            Margin="0,15,0,0">
+				    <Entry
+					    Placeholder="Quantidade"
+					    Keyboard="Numeric"
+					    MaxLength="5"
+					    FontSize="20"
+					    ClearButtonVisibility="WhileEditing"/>
+			    </Border>
+				
+			    <VerticalStackLayout>
+				    <Label Text="Conta:" FontSize="16"/>
+			    
+				    <Entry
+					    Placeholder="000030234"
+					    Keyboard="Numeric"
+					    MaxLength="10"
+					    FontSize="20"
+					    BackgroundColor="Transparent"
+					    ClearButtonVisibility="WhileEditing"/>
+				    
+				    <Line X2="20000"
+				          
+				          Stroke="Gray"
+				          StrokeDashArray="2,1"
+				          />
+			    </VerticalStackLayout>
+			</StackLayout>
+			
+			<Button Text="Enviar"
+			        HeightRequest="50"
+			        FontSize="25"
+			        BackgroundColor="MediumAquamarine"
+			        Margin="0,0,0,25"
+			        VerticalOptions="End"
+			        Grid.Row="1"/>
+	    </Grid>
+	</ScrollView>
+</ContentPage>
